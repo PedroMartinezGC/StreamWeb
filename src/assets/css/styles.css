@@ -1,0 +1,86 @@
+/*Fonts*/
+
+@font-face{
+	font-family: "NetflixSansLight";
+	src: url("fonts/NetflixSansLight.ttf");
+}
+@font-face{
+	font-family: "NetflixSansRegular";
+	src: url("fonts/NetflixSansRegular.ttf");
+}
+@font-face{
+	font-family: "NetflixSansMedium";
+	src: url("fonts/NetflixSansMedium.ttf");
+}
+@font-face{
+	font-family: "NetflixSansThin";
+	src: url("fonts/NetflixSansThin.ttf");
+}
+@font-face{
+	font-family: "NetflixSansBlack";
+	src: url("fonts/NetflixSansBlack.ttf");
+}
+
+/*Main*/
+
+*{
+	background: rgba(20, 20, 20);
+	margin: 0px;
+	list-style: none;
+}
+
+/*Header*/
+
+header{
+	display: block;
+	height: 70px;
+	width: 100%;
+	background: rgba(12, 12, 12);
+	position: fixed;
+	margin-top: 0px;
+}
+.list ul{
+	background: rgba(12, 12, 12);
+	padding-right: 0px;
+  	padding-left: 0px;
+   	padding-bottom: 0px;
+   	padding-top: 0px;
+ 	margin: 0px;
+ 	margin-top: 25px;
+ 	margin-left: 100px;
+}
+.list li{
+	list-style-type: none;
+   	display: inline;
+   	background: rgba(12, 12, 12);
+   	padding: 10px;
+}
+.list a{
+	font-family: "NetflixSansRegular", Arial;
+	font-size: 14px;
+	color: rgba(229, 229, 229);
+	background: rgba(12, 12, 12);
+}
+.list a:hover{
+	color: #ccc;
+	transition: 400ms;
+	cursor: pointer;
+}
+.logo{
+	width: 170px;
+	height: 100%;
+	background: rgba(12, 12, 12);
+	float: left;
+}
+.logo a{
+	background: inherit;
+}
+
+.logo1{
+	width: 95px;
+	margin-left: 60px;
+	margin-top: 10px;
+	background: rgba(12, 12, 12);
+}
+
+
