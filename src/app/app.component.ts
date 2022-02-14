@@ -8,9 +8,11 @@ import * as $ from 'jquery';
 })
 export class AppComponent implements OnInit{
   public title = 'StreamWeb';
+  public films: string[];
 
 
   constructor(){
+    this.films = ["Django", "There will bee blood", "Orange Clockwork", "Memento", "Killer's kiss", "Barry Lyndon", "Stalker", "Fight Club"];
   }
   ngOnInit(){
   	$("#logo-profile").mouseover(function(){
@@ -25,6 +27,14 @@ export class AppComponent implements OnInit{
   						.css("-o-transform", "rotate(0deg)")
   						.css("-webkit-transform", "rotate(0deg)");
   	});
+      
+      //$(".deployable").css("visibility", "hidden");
+  }
+  filmOver(){
+    $(".deployable").css("visibility", "visible");
+  }
+  filmOut(){
+    $(".deployable").css("visibility", "hidden");
   }
 
 
