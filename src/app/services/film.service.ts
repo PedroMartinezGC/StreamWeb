@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { Global } from './global'
+import { Global } from './global';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class FilmService {
   	this.api_key = Global.api_key;
   }
 
-  getTopRatedFilms() Observable<any>{
+  getTopRatedFilms(): Observable<any>{
   	let headers = new HttpHeaders().set('Content-type', 'application/json');
 
   	return this._http.get(this.url+'/movie/top_rated'+'?'+this.api_key, {headers: headers});

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FilmService } from './services/film.service'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,7 @@ import { DetailComponent } from './components/detail/detail.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [FilmService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
