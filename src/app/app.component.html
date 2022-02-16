@@ -41,20 +41,17 @@
   <section class = "content">
     <div style = "width: 150px; height: 150px; background: yellow">
     </div>
-    <ul> 
-      <li *ngFor = "let film of toprated_title; let i=index">
+
+    <h2 style = "padding-left: 60px;">Top rated movies</h2>
+    <div class = "film-list"> 
+      <div *ngFor = "let film of toprated_title; let i=index">
         <div (mouseover) = "filmOver()">
           <img src = "{{toprated_img[i]}}" class = "film" />
         </div>
         <!--<section (mouseout) = "filmOut()" class = "deployable"></section>-->
-      </li>
-      
-      <!--<li>
-        <div (mouseover) = "filmOver()" class = "film">
-          <span>Hola</span>
-        </div>
-      </li> -->
-    </ul> 
+      </div>
+    </div> 
+
     <div class = "scroll-right"><a>></a></div>
     <div class = "scroll-left"><a><</a></div>
     
