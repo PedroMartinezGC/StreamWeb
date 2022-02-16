@@ -32,7 +32,16 @@ h2{
 	font-family: "NetflixLight", Helvetica;
 	color: rgba(229, 229, 229);
 	font-size: 22px;
-
+}
+h3{
+	font-family: "NetflixLight", Helvetica;
+	color: rgba(229, 229, 229);
+	font-size: 13.5px;
+}
+h4{
+	font-family: "NetflixLight", Helvetica;
+	color: rgba(229, 229, 229);
+	font-size: 13.5px;
 }
 /*Header*/
 
@@ -159,13 +168,25 @@ header{
 	z-index: 1;
 	transition: all 0.5s;
 }
-/*pruebas*/
+/*Film's flexbox*/
 .content{
 	background: green;
 	width: 100%;
 	height: 100% auto;
 	min-height: 1200px;
 	position: relative;
+}
+.film-list h2{
+	position: absolute;
+	width: 400px;
+	top: 20px;
+	cursor: pointer;
+	z-index: 0;
+}
+.film-list h3{
+	display: inline;
+	color: rgba(229, 229, 229, 0.0);
+	transition: 1s;
 }
 .content .film-list{
 
@@ -174,7 +195,7 @@ header{
 	padding-right: 0px;
   	padding-left: 60px;
    	padding-bottom: 0px;
-   	padding-top: 0px;
+   	padding-top: 40px;
    	margin-left: 0px;
    	margin-top: 0px;
    	/*row*/
@@ -182,8 +203,8 @@ header{
    	overflow-y: hidden; 
    	overflow-x: scroll;
    	/*overflow: hidden;*/	/*This allow the posters get out the ul when hover*/
+   	position: relative;
    	z-index: 0;
-
  	 	
 }
 .content .film-list::-webkit-scrollbar{
@@ -192,9 +213,9 @@ header{
 
 .content .film-list div{
 	list-style-type: none;
-	margin-top: 8px;
-			
+	margin-top: 8px;		
 }
+
 
 
 

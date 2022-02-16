@@ -34,18 +34,32 @@ export class AppComponent implements OnInit{
     this.getTopRatedFilms();
     console.log(this.url+'/movie/top_rated'+'?'+this.api_key);
 
-  	$("#logo-profile").mouseover(function(){
-  		$("#logo-arrow").css("-moz-transform", "rotate(180deg)")
-  						.css("-ms-transform", "rotate(180deg)")
-  						.css("-o-transform", "rotate(180deg)")
-  						.css("-webkit-transform", "rotate(180deg)");
-  	});
-  	$("#logo-profile").mouseout(function(){
-  		$("#logo-arrow").css("-moz-transform", "rotate(0deg)")
-  						.css("-ms-transform", "rotate(0deg)")
-  						.css("-o-transform", "rotate(0deg)")
-  						.css("-webkit-transform", "rotate(0deg)");
-  	});
+    function overLogo(): any{
+      $("#logo-arrow").css("-moz-transform", "rotate(180deg)")
+              .css("-ms-transform", "rotate(180deg)")
+              .css("-o-transform", "rotate(180deg)")
+              .css("-webkit-transform", "rotate(180deg)");
+    }
+    function outLogo(): any{
+      $("#logo-arrow").css("-moz-transform", "rotate(0deg)")
+              .css("-ms-transform", "rotate(0deg)")
+              .css("-o-transform", "rotate(0deg)")
+              .css("-webkit-transform", "rotate(0deg)");
+    }
+    function overTitle(): any{
+      $("div.film-list h2 h3").css("padding-left", "20px")
+                          .css("color", "rgba(250, 250, 250)")
+                          .css("visibility", "visible");
+    }
+    function outTitle(): any{
+      $("div.film-list h2 h3").css("padding-left", "0px")
+                          .css("color", "rgba(250, 250, 250, 0.0)")
+                          .css("visibility", "hidden");
+    }
+
+  	$("#logo-profile").hover(overLogo, outLogo);
+  	
+    $("div.film-list h2").hover(overTitle, outTitle);
       
       //$(".deployable").css("visibility", "hidden");
   }

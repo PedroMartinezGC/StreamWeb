@@ -42,11 +42,12 @@
     <div style = "width: 150px; height: 150px; background: yellow">
     </div>
 
-    <h2 style = "padding-left: 60px;">Top rated movies</h2>
+    
     <div class = "film-list"> 
+      <h2>Top rated movies<h3>Explore all ></h3></h2>
       <div *ngFor = "let film of toprated_title; let i=index">
         <div (mouseover) = "filmOver()">
-          <img src = "{{toprated_img[i]}}" class = "film" />
+          <img src = "{{toprated_img[i]}}" class = "film"/>
         </div>
         <!--<section (mouseout) = "filmOut()" class = "deployable"></section>-->
       </div>
