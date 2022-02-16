@@ -40,10 +40,9 @@
 
   <section class = "content">
     <ul> 
-      <li *ngFor = "let film of toprated_title">
-        <div (mouseover) = "filmOver()" class = "film">
-          <span>{{film}}</span>
-          <!--<img src = "{{}}"/>-->
+      <li *ngFor = "let film of toprated_title; let i=index">
+        <div (mouseover) = "filmOver()">
+          <img src = "{{toprated_img[i]}}" class = "film" />
         </div>
         <!--<section (mouseout) = "filmOut()" class = "deployable"></section>-->
       </li>
