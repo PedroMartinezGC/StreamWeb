@@ -20,6 +20,10 @@ export class AppComponent implements OnInit{
   public toprated_title: string[];
   public toprated_img: string[];
 
+  public chosen: number;
+
+  public slideConfig: any;
+
 
   constructor( private _filmService: FilmService){
 
@@ -28,6 +32,8 @@ export class AppComponent implements OnInit{
     this.url_img = Global.url_img;
     this.toprated_title = [];
     this.toprated_img = [];
+
+    this.slideConfig = {"slidesToShow": 6, "slidesToScroll": 4};
   }
   ngOnInit(): void{
     
@@ -70,6 +76,11 @@ export class AppComponent implements OnInit{
 
   filmOut(){
     $(".deployable").css("visibility", "hidden");
+  }
+  openFilm(i: any){
+      this.chosen = i;
+      console.log(this.chosen);
+    
   }
 
   getTopRatedFilms(){

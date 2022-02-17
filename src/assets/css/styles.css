@@ -57,7 +57,8 @@ header{
 	z-index: 3;
 }
 .list ul{
-	background: rgba(12, 12, 12);
+	/*background: rgba(12, 12, 12);*/
+	background: inherit;
 	padding-right: 0px;
   	padding-left: 0px;
    	padding-bottom: 0px;
@@ -69,14 +70,16 @@ header{
 .list li{
 	list-style-type: none;
    	display: inline;
-   	background: rgba(12, 12, 12);
+   	/*background: rgba(12, 12, 12);*/
+   	background: inherit;
    	padding: 10px;
 }
 .list a{
 	font-family: "NetflixSansRegular", Arial;
 	font-size: 14px;
 	color: rgba(229, 229, 229);
-	background: rgba(12, 12, 12);
+	/*background: rgba(12, 12, 12);*/
+	background: inherit;
 }
 .list-left a:hover{
 	color: rgba(170, 176, 173);
@@ -86,7 +89,8 @@ header{
 .logo{
 	width: 170px;
 	height: 70px;
-	background: rgba(12, 12, 12);
+	/*background: rgba(12, 12, 12);*/
+	/*background: inherit;*/
 	float: left;
 }
 .logo a{
@@ -97,7 +101,8 @@ header{
 	width: 95px;
 	margin-left: 60px;
 	margin-top: 10px;
-	background: rgba(12, 12, 12);
+	/*background: rgba(12, 12, 12);*/
+	background: inherit;
 }
 .list-right{
 	display: inline;
@@ -172,6 +177,15 @@ header{
 }
 
 /*Film's flexbox*/
+
+.carousel{
+	display: flex;
+	width: 98%;
+}
+
+.slick-prev{
+	z-index: 2;
+}
 
 .content{
 	/*background: green;*/
