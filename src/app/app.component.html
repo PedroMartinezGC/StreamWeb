@@ -81,14 +81,12 @@
 
       <ngx-slick-carousel class="carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor = "let film of toprated_title; let i=index" style ="padding-bottom: 20px">
-          <a (click) = "openFilm(i)"><img src = "{{toprated_poster[i]}}" class = "film"/></a>
+          <a (click) = "openFilm(i)" (click) = "openListRated()"><img src = "{{toprated_poster[i]}}" class = "film"/></a>
         </div>
       </ngx-slick-carousel>
 
     </div> 
 
-    <div class = "scroll-right"><a>></a></div>
-    <div class = "scroll-left"><a><</a></div>
 
     
 

@@ -22,6 +22,7 @@ export class AppComponent implements OnInit{
   public toprated_backdrop: string[];
   public toprated_overview: string[];
 
+  public list: any;
   public chosen: number;
 
   public slideConfig: any;
@@ -84,8 +85,13 @@ export class AppComponent implements OnInit{
   openFilm(i: any){
       this.chosen = i;
       console.log(this.chosen);
-    
   }
+  openListRated(){
+
+    this.list = this.toprated_backdrop;
+    return this.list;
+  }
+  
 
   getTopRatedFilms(){
     this._filmService.getTopRatedFilms().subscribe(
@@ -114,6 +120,7 @@ export class AppComponent implements OnInit{
       }
     );
   }
+
 
 
 }
