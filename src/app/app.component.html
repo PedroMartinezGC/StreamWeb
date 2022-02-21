@@ -42,8 +42,37 @@
 
     <!-- Main Image -->
     <div class = "container-img">
-      <img *ngIf = "chosen" src = "{{toprated_img[chosen]}}" class = "main-img"/>
-      <img *ngIf = "!chosen" src = "{{toprated_img[4]}}" class = "main-img"/> 
+
+      <div *ngIf = "chosen || chosen == 0">
+        <img src = "{{toprated_backdrop[chosen]}}" class = "main-img"/>
+        <div></div>
+        <div class = "main-box">
+          <h1 class = "main-title">{{toprated_title[chosen]}}</h1>
+          <h4 class = "main-description">{{toprated_overview[chosen]}}</h4>
+        </div>
+      </div>
+
+      <div *ngIf = "!chosen">
+        <img  src = "{{toprated_backdrop[4]}}" class = "main-img"/>
+
+        <div class = "main-box">
+          <h1 class = "main-title">{{toprated_title[4]}}</h1>
+          <h4 class = "main-description">{{toprated_overview[4]}}</h4>
+        </div>
+
+        <div class = "header-buttons">
+          <button class = "play-button">
+            <!--<mat-icon>arrow_right</mat-icon>-->
+            <span>Play</span>
+          </button>
+
+          <button class = "info-button">
+            <!--<mat-icon>info</mat-icon>-->
+            <span>More Info</span>
+          </button>
+        </div>
+        
+      </div> 
     </div>
 
     <!-- Films sections--> 
@@ -52,7 +81,7 @@
 
       <ngx-slick-carousel class="carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor = "let film of toprated_title; let i=index" style ="padding-bottom: 20px">
-          <a (click) = "openFilm(i)"><img src = "{{toprated_img[i]}}" class = "film"/></a>
+          <a (click) = "openFilm(i)"><img src = "{{toprated_poster[i]}}" class = "film"/></a>
         </div>
       </ngx-slick-carousel>
 

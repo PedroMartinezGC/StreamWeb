@@ -18,7 +18,9 @@ export class AppComponent implements OnInit{
 
   public filmresults: string[];
   public toprated_title: string[];
-  public toprated_img: string[];
+  public toprated_poster: string[];
+  public toprated_backdrop: string[];
+  public toprated_overview: string[];
 
   public chosen: number;
 
@@ -31,9 +33,11 @@ export class AppComponent implements OnInit{
     this.api_key = Global.api_key;
     this.url_img = Global.url_img;
     this.toprated_title = [];
-    this.toprated_img = [];
+    this.toprated_poster = [];
+    this.toprated_backdrop = [];
+    this.toprated_overview = [];
 
-    this.slideConfig = {"slidesToShow": 6, "slidesToScroll": 4};
+    this.slideConfig = {"slidesToShow": 7, "slidesToScroll": 4};
   }
   ngOnInit(): void{
     
@@ -93,10 +97,13 @@ export class AppComponent implements OnInit{
 
           this.filmresults.forEach((element, i, array)=>{
             this.toprated_title.push(response.results[i].title);
-            this.toprated_img.push(this.url_img+response.results[i].backdrop_path);
+            this.toprated_poster.push(this.url_img+response.results[i].poster_path);
+            this.toprated_backdrop.push(this.url_img+response.results[i].backdrop_path);
+            this.toprated_overview.push(response.results[i].overview);
           });
           console.log(this.toprated_title);
-          console.log(this.toprated_img);
+          console.log(this.toprated_poster);
+          console.log(this.chosen);
           
 
 
