@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { routing, appRoutingProviders } from './app.routing';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FilmService } from './services/film.service';
@@ -20,9 +21,13 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    routing
   ],
-  providers: [FilmService],
+  providers: [
+  FilmService,
+  appRoutingProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
