@@ -44,11 +44,11 @@
     <div class = "container-img">
 
       <div *ngIf = "chosen || chosen == 0">
-        <img src = "{{toprated_backdrop[chosen]}}" class = "main-img"/>
+        <img src = "{{backdrop[chosen]}}" class = "main-img"/>
         <div></div>
         <div class = "main-box">
-          <h1 class = "main-title">{{toprated_title[chosen]}}</h1>
-          <h4 class = "main-description">{{toprated_overview[chosen]}}</h4>
+          <h1 class = "main-title">{{name[chosen]}}</h1>
+          <h4 class = "main-description">{{overview[chosen]}}</h4>
         </div>
       </div>
 
@@ -77,20 +77,50 @@
 
     <!-- Films sections--> 
     <div class = "film-list"> 
-      <h2>Top rated movies<h3>Explore all ></h3></h2>
+      <h2 class="toprated-movies">Top rated movies<h3>Explore all ></h3></h2>
 
       <ngx-slick-carousel class="carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor = "let film of toprated_title; let i=index" style ="padding-bottom: 20px">
-          <a (click) = "openFilm(i)" (click) = "openListRated()"><img src = "{{toprated_poster[i]}}" class = "film"/></a>
+          <a (click) = "openFilm(i)" (click) = "openTopRatedMovie()"><img src = "{{toprated_poster[i]}}" class = "film"/></a>
         </div>
       </ngx-slick-carousel>
-
     </div> 
 
+    <div class = "film-list"> 
+      <h2 class="toprated-movies">Popular TV shows<h3>Explore all ></h3></h2>
 
-    
+      <ngx-slick-carousel class="carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor = "let film of populartv_title; let i=index" style ="padding-bottom: 20px">
+          <a (click) = "openFilm(i)" (click) = "openPopularShow()"><img src = "{{populartv_poster[i]}}" class = "film"/></a>
+        </div>
+      </ngx-slick-carousel>
+    </div>
 
-    
+    <div class = "film-list"> 
+      <h2 class="toprated-movies">Airing TV shows<h3>Explore all ></h3></h2>
+
+      <ngx-slick-carousel class="carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor = "let film of onairtv_title; let i=index" style ="padding-bottom: 20px">
+          <a (click) = "openFilm(i)" (click) = "openOnAirShow()"><img src = "{{onairtv_poster[i]}}" class = "film"/></a>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+
+    <div class = "film-list"> 
+      <h2 class="toprated-movies">Top rated TV shows<h3>Explore all ></h3></h2>
+
+      <ngx-slick-carousel class="carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor = "let film of topratedtv_title; let i=index" style ="padding-bottom: 20px">
+          <a (click) = "openFilm(i)" (click) = "openTopRatedShow()"><img src = "{{topratedtv_poster[i]}}" class = "film"/></a>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+
+
 
   </section>
+
+  <footer>
+  </footer>
+
 </body>

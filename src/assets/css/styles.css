@@ -49,6 +49,7 @@ h4{
 	color: rgba(229, 229, 229);
 	font-size: 13.5px;
 }
+
 /*Header*/
 
 header{
@@ -263,10 +264,11 @@ header{
 	background: transparent;
 	padding-right: 0px;
   	padding-left: 60px;
-   	padding-bottom: 0px;
+   	padding-bottom: 120px;
    	padding-top: 40px;
    	margin-left: 0px;
    	margin-top: -65px;
+   	margin-bottom: 0px;
    	/*row*/
    	display: flex;
    	overflow-y: hidden; 

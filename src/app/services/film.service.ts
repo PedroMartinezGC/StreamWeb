@@ -21,4 +21,19 @@ export class FilmService {
 
   	return this._http.get(this.url+'/movie/top_rated'+'?'+this.api_key, {headers: headers});
   }
+  getTopTvShows(): Observable<any>{
+    let headers = new HttpHeaders().set('Content-type', 'application/json');
+
+    return this._http.get(this.url+'/tv/top_rated'+'?'+this.api_key, {headers: headers});
+  }
+  getPopularTvShows(): Observable<any>{
+    let headers = new HttpHeaders().set('Content-type', 'application/json');
+
+    return this._http.get(this.url+'/tv/popular'+'?'+this.api_key, {headers: headers});
+  }
+  getOnAirTvShows(): Observable<any>{
+    let headers = new HttpHeaders().set('Content-type', 'application/json');
+
+    return this._http.get(this.url+'/tv/airing_today'+'?'+this.api_key, {headers: headers});
+  }
 }
