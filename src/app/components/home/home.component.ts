@@ -85,6 +85,12 @@ export class HomeComponent implements OnInit{
 
     console.log(this.url+'/tv/latest'+'?'+this.api_key);
 
+  	window.addEventListener("scroll", (event) => {
+    	let scrollY = window.scrollY;
+    	console.log(scrollY);
+	});
+  	
+
     function overLogo(): any{
       $("#logo-arrow").css("-moz-transform", "rotate(180deg)")
               .css("-ms-transform", "rotate(180deg)")
@@ -113,6 +119,7 @@ export class HomeComponent implements OnInit{
     $("h2.toprated-movies").hover(overTitle, outTitle);
       
   }
+
 
   scrollTop(){
     window.scroll({

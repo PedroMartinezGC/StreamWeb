@@ -56,7 +56,7 @@ header{
 	display: block;
 	height: 70px;
 	width: 100%;
-	background: rgba(12, 12, 12, 0.5);
+	background: linear-gradient(rgba(20, 20, 20), rgba(255, 255, 255, 0));
 	position: fixed;	/*This make the header stay fixed in his position when we scroll the page*/
 	margin-top: 0px;
 	top: 0;		/*This attach the header to the top of the page on every situation*/

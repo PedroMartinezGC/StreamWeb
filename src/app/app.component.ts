@@ -21,6 +21,18 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void{
 
+    window.addEventListener("scroll", (event)=>{
+      let scrollY = window.scrollY;
+      console.log(scrollY);
+
+      if(scrollY == 0){
+        $("header").css("background", "linear-gradient(rgba(20, 20, 20), rgba(255, 255, 255, 0))")
+                    .css("transition", "0.2s");
+      }else{
+        $("header").css("background", "rgba(12, 12, 12)")
+                    .css("transition", "0.35s");
+      }
+    });
 
     function overLogo(): any{
       $("#logo-arrow").css("-moz-transform", "rotate(180deg)")
