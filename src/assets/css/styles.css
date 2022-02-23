@@ -86,6 +86,7 @@ header{
 	color: rgba(229, 229, 229);
 	/*background: rgba(12, 12, 12);*/
 	background: inherit;
+	text-decoration: none;
 }
 .list-left a:hover{
 	color: rgba(170, 176, 173);

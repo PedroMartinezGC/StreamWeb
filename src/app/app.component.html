@@ -8,11 +8,11 @@
             <li><a></a></li>
             <li class = "list-left"><a [routerLink] = "['/home']" [routerLinkActive] = "['actived']">Home</a></li>
 
-            <li class = "list-left"><a>TV Shows</a></li>
+            <li class = "list-left"><a [routerLink] = "['/tv-shows']" [routerLinkActive] = "['actived']">TV Shows</a></li>
 
-            <li class = "list-left"><a>Movies</a></li>
+            <li class = "list-left"><a [routerLink] = "['/movies']" [routerLinkActive] = "['actived']">Movies</a></li>
 
-            <li class = "list-left"><a>Latest</a></li>
+            <li class = "list-left"><a [routerLink] = "['/latest']" [routerLinkActive] = "['actived']">Latest</a></li>
 
             <li class = "list-left"><a>My list</a></li>
 
@@ -37,9 +37,8 @@
         </ul>
     </div>
   </header>
-
+  <!--<router-outlet></router-outlet>--> 
   <section class = "content">
-
     <!-- Main Image -->
     <div class = "container-img">
 
@@ -122,5 +121,4 @@
 
   <footer>
   </footer>
-
 </body>
