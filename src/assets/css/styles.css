@@ -294,6 +294,18 @@ header{
 	color: white;
 }
 
+/* Window */
+.window{
+	width: 40%;
+	height: 412px;
+	background: yellow;
+	position: absolute;
+	left: 31%;
+	bottom: 60px;
+	border-radius: 10px;
+	z-index: 4;
+}
+
 
 
 
