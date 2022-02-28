@@ -23,7 +23,6 @@ export class AppComponent implements OnInit{
 
     window.addEventListener("scroll", (event)=>{
       let scrollY = window.scrollY;
-      console.log(scrollY);
 
       if(scrollY <= 150){
         $("header").css("background", "linear-gradient(rgba(20, 20, 20), rgba(255, 255, 255, 0))")

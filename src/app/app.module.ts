@@ -11,6 +11,9 @@ import { DetailComponent } from './components/detail/detail.component';
 
 // Libraries
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { MatIconModule } from '@angular/material/icon';
+
+//Components
 import { TvshowsComponent } from './components/tvshows/tvshows.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { LatestComponent } from './components/latest/latest.component';
@@ -30,7 +33,8 @@ import { HomeComponent } from './components/home/home.component';
     AppRoutingModule,
     HttpClientModule,
     SlickCarouselModule,
-    routing
+    routing,
+    MatIconModule
   ],
   providers: [
   FilmService,
