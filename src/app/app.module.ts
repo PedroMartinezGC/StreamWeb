@@ -18,6 +18,7 @@ import { TvshowsComponent } from './components/tvshows/tvshows.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { LatestComponent } from './components/latest/latest.component';
 import { HomeComponent } from './components/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HomeComponent } from './components/home/home.component';
     HttpClientModule,
     SlickCarouselModule,
     routing,
-    MatIconModule
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [
   FilmService,
