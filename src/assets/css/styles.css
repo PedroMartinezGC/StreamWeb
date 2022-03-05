@@ -305,6 +305,48 @@ header{
 	border-radius: 10px;
 	z-index: 4;
 }
+/* Header Buttons */
+
+.header-buttons{
+	display: flex;
+	margin-left: 60px;
+}
+.header-buttons button{
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	font-size: 20px;
+	padding: 15px 40px; /* top, right*/
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	margin-right: 11px;
+	margin-top: 30px;
+	cursor: pointer;
+}
+.play-button, .info-button{
+	width: 220px;
+	height: 45px;
+	background: white;
+	/*margin-right: 10px;*/
+}
+.play-button span{
+	font-family: "NetflixSansMedium", Helvetica;
+	font-size: 18px;
+	color: black;
+}
+.info-button{
+	background-color: rgba(112, 113, 109, 0.7);
+}
+.info-button mat-icon{
+	color: lightgray;
+}
+.info-button span{
+	font-family: "NetflixSansMedium", Helvetica;
+	font-size: 18px;
+	color: white;
+}
+
 
 
 

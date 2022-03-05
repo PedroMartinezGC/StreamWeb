@@ -27,7 +27,7 @@
               "src/assets"
             ],
             "styles": [
-              //"src/styles.css"
+              "src/styles.css",//antes estaba marcado con las //
               "node_modules/slick-carousel/slick/slick.scss",
               "node_modules/slick-carousel/slick/slick-theme.scss",
               "src/assets/css/styles.css"
