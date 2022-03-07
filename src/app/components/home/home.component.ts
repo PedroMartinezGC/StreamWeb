@@ -21,32 +21,37 @@ export class HomeComponent implements OnInit{
   public toprated_poster: string[];
   public toprated_backdrop: string[];
   public toprated_overview: string[];
+  public toprated_id: number[];
 
   public filmresultstv: string[];
   public topratedtv_title: string[];
   public topratedtv_poster: string[];
   public topratedtv_backdrop: string[];
   public topratedtv_overview: string[];
+  public topratedtv_id: number[];
 
   public filmresultspop_tv: string[];
   public populartv_title: string[];
   public populartv_poster: string[];
   public populartv_backdrop: string[];
   public populartv_overview: string[];
+  public populartv_id: number[];
 
   public filmresultsonair_tv: string[];
   public onairtv_title: string[];
   public onairtv_poster: string[];
   public onairtv_backdrop: string[];
   public onairtv_overview: string[];
+  public onairtv_id: number[];
 
   public backdrop: any;
   public overview: any;
   public name: any;
+  public id: number;
   public chosen: number;
 
   public slideConfig: any;
-
+  
 
   constructor( private _filmService: FilmService){
 
@@ -58,21 +63,25 @@ export class HomeComponent implements OnInit{
     this.toprated_poster = [];
     this.toprated_backdrop = [];
     this.toprated_overview = [];
+    this.toprated_id = [];
 
     this.topratedtv_title = [];
     this.topratedtv_poster = [];
     this.topratedtv_backdrop = [];
     this.topratedtv_overview = [];
+    this.topratedtv_id = [];
 
     this.populartv_title = [];
     this.populartv_poster = [];
     this.populartv_backdrop = [];
     this.populartv_overview = [];
+    this.populartv_id = [];
 
     this.onairtv_title = [];
     this.onairtv_poster = [];
     this.onairtv_backdrop = [];
     this.onairtv_overview = [];
+    this.onairtv_id = [];
 
     this.slideConfig = {"slidesToShow": 7, "slidesToScroll": 4};
   }
@@ -134,27 +143,31 @@ export class HomeComponent implements OnInit{
   	  }
       
   }
-  openTopRatedMovie(){
+  openTopRatedMovie(i: any){
     this.backdrop = this.toprated_backdrop;
     this.name = this.toprated_title;
     this.overview = this.toprated_overview;
+    this.id = this.toprated_id[i];
     
   }
-  openPopularShow(){
+  openPopularShow(i: any){
     this.backdrop = this.populartv_backdrop;
     this.name = this.populartv_title;
     this.overview = this.populartv_overview;
+    this.id = this.populartv_id[i];
 
   }
-  openTopRatedShow(){
+  openTopRatedShow(i: any){
     this.backdrop = this.topratedtv_backdrop;
     this.name = this.topratedtv_title;
     this.overview = this.topratedtv_overview;
+    this.id = this.topratedtv_id[i];
   }
-  openOnAirShow(){
+  openOnAirShow(i: any){
     this.backdrop = this.onairtv_backdrop;
     this.name = this.onairtv_title;
     this.overview = this.onairtv_overview;
+    this.id = this.onairtv_id[i];
   }
 
   getTopRatedFilms(){
@@ -170,6 +183,7 @@ export class HomeComponent implements OnInit{
             this.toprated_poster.push(this.url_img+response.results[i].poster_path);
             this.toprated_backdrop.push(this.url_img+response.results[i].backdrop_path);
             this.toprated_overview.push(response.results[i].overview);
+            this.toprated_id.push(response.results[i].id);
           });
         }
       }, 
@@ -193,6 +207,7 @@ export class HomeComponent implements OnInit{
             this.topratedtv_poster.push(this.url_img+response.results[i].poster_path);
             this.topratedtv_backdrop.push(this.url_img+response.results[i].backdrop_path);
             this.topratedtv_overview.push(response.results[i].overview);
+            this.topratedtv_id.push(response.results[i].id);
           });
         }
       }, 
@@ -216,6 +231,7 @@ export class HomeComponent implements OnInit{
             this.populartv_poster.push(this.url_img+response.results[i].poster_path);
             this.populartv_backdrop.push(this.url_img+response.results[i].backdrop_path);
             this.populartv_overview.push(response.results[i].overview);
+            this.populartv_id.push(response.results[i].id);
           });
         }
       }, 
@@ -239,6 +255,7 @@ export class HomeComponent implements OnInit{
             this.onairtv_poster.push(this.url_img+response.results[i].poster_path);
             this.onairtv_backdrop.push(this.url_img+response.results[i].backdrop_path);
             this.onairtv_overview.push(response.results[i].overview);
+            this.onairtv_id.push(response.results[i].id);
           });
         }
       }, 
