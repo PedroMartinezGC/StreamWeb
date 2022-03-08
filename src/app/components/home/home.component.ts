@@ -91,6 +91,7 @@ export class HomeComponent implements OnInit{
     this.getTopTvShows();
     this.getPopularTvShows();
     this.getOnAirTvShows();
+    //this.getShowDetails();
 
     console.log(this.url+'/tv/latest'+'?'+this.api_key);
   	
@@ -119,8 +120,47 @@ export class HomeComponent implements OnInit{
     }
 
   	$("#logo-profile").hover(overLogo, outLogo);
-  	
+
     $("h2.toprated-movies").hover(overTitle, outTitle);
+  	
+    $("h2.popular-tvshows").hover(
+      ()=>{
+        $("h2.popular-tvshows h3").css("padding-left", "20px")
+                          .css("color", "rgba(250, 250, 250)")
+                          .css("visibility", "visible");
+      },
+      ()=>{
+        $("h2.popular-tvshows h3").css("padding-left", "0px")
+                          .css("color", "rgba(250, 250, 250, 0.0)")
+                          .css("visibility", "hidden");
+      }
+    );
+
+    $("h2.airing-tvshows").hover(
+      ()=>{
+        $("h2.airing-tvshows h3").css("padding-left", "20px")
+                          .css("color", "rgba(250, 250, 250)")
+                          .css("visibility", "visible");
+      },
+      ()=>{
+        $("h2.airing-tvshows h3").css("padding-left", "0px")
+                          .css("color", "rgba(250, 250, 250, 0.0)")
+                          .css("visibility", "hidden");
+      }
+    );
+
+    $("h2.toprated-tvshows").hover(
+      ()=>{
+        $("h2.toprated-tvshows h3").css("padding-left", "20px")
+                          .css("color", "rgba(250, 250, 250)")
+                          .css("visibility", "visible");
+      },
+      ()=>{
+        $("h2.toprated-tvshows h3").css("padding-left", "0px")
+                          .css("color", "rgba(250, 250, 250, 0.0)")
+                          .css("visibility", "hidden");
+      }
+    );
       
   }
 
@@ -148,6 +188,7 @@ export class HomeComponent implements OnInit{
     this.name = this.toprated_title;
     this.overview = this.toprated_overview;
     this.id = this.toprated_id[i];
+    console.log(this.id);
     
   }
   openPopularShow(i: any){
@@ -155,6 +196,7 @@ export class HomeComponent implements OnInit{
     this.name = this.populartv_title;
     this.overview = this.populartv_overview;
     this.id = this.populartv_id[i];
+    console.log(this.id);
 
   }
   openTopRatedShow(i: any){
@@ -162,12 +204,14 @@ export class HomeComponent implements OnInit{
     this.name = this.topratedtv_title;
     this.overview = this.topratedtv_overview;
     this.id = this.topratedtv_id[i];
+    console.log(this.id);
   }
   openOnAirShow(i: any){
     this.backdrop = this.onairtv_backdrop;
     this.name = this.onairtv_title;
     this.overview = this.onairtv_overview;
     this.id = this.onairtv_id[i];
+    console.log(this.id);
   }
 
   getTopRatedFilms(){
@@ -264,6 +308,18 @@ export class HomeComponent implements OnInit{
       }
     );
   }
+  /*getShowDetails(){
+    this._filmService.getShowDetails().subscribe(
+      response=>{
+        if(response){
+          console.log(response);
+        }
+      },
+      error=>{
+        console.log(<any>error);
+      }
+    );
+  }*/
 
 
 

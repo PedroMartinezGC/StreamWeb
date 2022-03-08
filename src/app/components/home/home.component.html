@@ -62,7 +62,7 @@
     </div> 
 
     <div class = "film-list"> 
-      <h2 class="toprated-movies">Popular TV shows<h3>Explore all ></h3></h2>
+      <h2 class="popular-tvshows">Popular TV shows<h3>Explore all ></h3></h2>
 
       <ngx-slick-carousel class="carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor = "let film of populartv_title; let i=index" style ="padding-bottom: 20px">
@@ -72,19 +72,19 @@
     </div>
 
     <div class = "film-list"> 
-      <h2 class="toprated-movies">Airing TV shows<h3>Explore all ></h3></h2>
+      <h2 class="airing-tvshows">Airing TV shows<h3>Explore all ></h3></h2>
 
       <ngx-slick-carousel class="carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor = "let film of onairtv_title; let i=index" style ="padding-bottom: 20px">
           <a (click) = "openFilm(i)" (click) = "openOnAirShow(i)" (click) = "scrollTop()"><img src = "{{onairtv_poster[i]}}" class = "film"/></a>
         </div>
       </ngx-slick-carousel>
-      <div class = "window">
-      </div>
+      <!--<div class = "window">
+      </div>-->
     </div>
 
     <div class = "film-list"> 
-      <h2 class="toprated-movies">Top rated TV shows<h3>Explore all ></h3></h2>
+      <h2 class="toprated-tvshows">Top rated TV shows<h3>Explore all ></h3></h2>
 
       <ngx-slick-carousel class="carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor = "let film of topratedtv_title; let i=index" style ="padding-bottom: 20px">

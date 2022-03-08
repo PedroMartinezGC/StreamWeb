@@ -36,4 +36,9 @@ export class FilmService {
 
     return this._http.get(this.url+'/tv/airing_today'+'?'+this.api_key, {headers: headers});
   }
+  getShowDetails(id: number): Observable<any>{
+    let headers = new HttpHeaders().set('Content-type', 'application/json');
+
+    return this._http.get(this.url+'/tv/'+id+'?'+this.api_key, {headers: headers});
+  }
 }
