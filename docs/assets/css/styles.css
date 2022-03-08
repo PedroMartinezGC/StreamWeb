@@ -1,0 +1,370 @@
+/*Fonts*/
+
+@font-face{
+	font-family: "NetflixSansLight";
+	src: url("fonts/NetflixSansLight.ttf");
+}
+@font-face{
+	font-family: "NetflixSansRegular";
+	src: url("fonts/NetflixSansRegular.ttf");
+}
+@font-face{
+	font-family: "NetflixSansMedium";
+	src: url("fonts/NetflixSansMedium.ttf");
+}
+@font-face{
+	font-family: "NetflixSansThin";
+	src: url("fonts/NetflixSansThin.ttf");
+}
+@font-face{
+	font-family: "NetflixSansBlack";
+	src: url("fonts/NetflixSansBlack.ttf");
+}
+
+/*Main*/
+
+*{
+	/*background: rgba(20, 20, 20);*/
+	background: transparent;
+	margin: 0px;
+	list-style: none;
+}
+h1{
+	font-family: "NetflixLight", Helvetica;
+	color: rgba(229, 229, 229);
+	font-size: 36px;
+}
+h2{
+	font-family: "NetflixLight", Helvetica;
+	color: rgba(229, 229, 229);
+	font-size: 22px;
+}
+h3{
+	font-family: "NetflixLight", Helvetica;
+	color: rgba(229, 229, 229);
+	font-size: 13.5px;
+}
+h4{
+	font-family: "NetflixLight", Helvetica;
+	color: rgba(229, 229, 229);
+	font-size: 13.5px;
+}
+
+/*Header*/
+
+header{
+	display: block;
+	height: 70px;
+	width: 100%;
+	background: linear-gradient(rgba(20, 20, 20), rgba(255, 255, 255, 0));
+	position: fixed;	/*This make the header stay fixed in his position when we scroll the page*/
+	margin-top: 0px;
+	top: 0;		/*This attach the header to the top of the page on every situation*/
+	z-index: 3;
+}
+.list ul{
+	/*background: rgba(12, 12, 12);*/
+	background: inherit;
+	padding-right: 0px;
+  	padding-left: 0px;
+   	padding-bottom: 0px;
+   	padding-top: 0px;
+ 	margin: 0px;
+ 	margin-top: 25px;
+ 	margin-left: 100px;
+}
+.list li{
+	list-style-type: none;
+   	display: inline;
+   	/*background: rgba(12, 12, 12);*/
+   	background: inherit;
+   	padding: 10px;
+}
+.list a{
+	font-family: "NetflixSansRegular", Arial;
+	font-size: 14px;
+	color: rgba(229, 229, 229);
+	/*background: rgba(12, 12, 12);*/
+	background: inherit;
+	text-decoration: none;
+}
+.list-left a:hover{
+	color: rgba(170, 176, 173);
+	transition: 400ms;
+	cursor: pointer;
+}
+.logo{
+	width: 170px;
+	height: 70px;
+	/*background: rgba(12, 12, 12);*/
+	/*background: inherit;*/
+	float: left;
+}
+.logo a{
+	background: inherit;
+}
+
+.logo1{
+	width: 95px;
+	margin-left: 60px;
+	margin-top: 10px;
+	/*background: rgba(12, 12, 12);*/
+	background: inherit;
+}
+.list-right{
+	display: inline;
+	float: right;
+	margin-top: -10px;
+	margin-right: 5px;
+}
+.list-right a:hover{
+	cursor: pointer;
+}
+#logo-search{
+	transform: scale(1.2);
+}
+#logo-alerts{
+	transform: scale(1.1);
+}
+#logo-profile{
+	width: 33px;
+	border-radius: 4px;
+	margin-top: -5px;
+}
+#logo-arrow{
+	width: 10px;
+	margin-left: -15px;
+	margin-right: 42px;
+	transition: all 0.30s;
+}
+#logo-arrow:hover{
+	-moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+/*Container*/
+
+/* Deployable */
+.film, .deployable{
+	position: absolute;
+}
+.film{
+	width: 195px;
+	height: 270px;
+	border-radius: 3px;
+	color: white;
+	/*background: rgba(0, 0, 0, 0.2);*/
+	background: transparent;
+	margin-top: 0px;
+	margin-left: 6px;
+	/*float: right;*/
+	z-index: 0;
+	transition: all 0.5s;
+	position: relative;
+	
+}
+.film:hover{
+	cursor: pointer;
+	transform: scale(1.12);
+	z-index: 2;
+
+}
+
+.deployable{
+	width: 230px;
+	height: 286px;
+	background: green;
+	visibility: hidden;
+	margin-left: 60px;
+	z-index: 1;
+	transition: all 0.5s;
+}
+
+/*Film's flexbox*/
+
+.carousel{
+	display: flex;
+	width: 98%;
+}
+
+.slick-prev{
+	z-index: 2;
+}
+
+.content{
+	/*background: green;*/
+	background: rgba(20, 20, 20);
+	width: 100%;
+	height: 100% auto;
+	min-height: 1200px;
+	position: relative;
+}
+.container-img{
+	width: 100%; 
+	height: 730px;
+	overflow: hidden;
+	position: relative;
+}
+.container-img:before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(rgba(255, 255, 255, 0),
+	 rgba(20, 20, 20));
+}
+.main-box{
+	width: 45%;
+	height: 600px;
+	/*background: yellow;*/
+	position: absolute;
+	top: 35%;
+	left: 0%;
+}
+.main-img{
+	display: block;
+	width: 100%;
+	/*clip-path: inset(0 0 150px 0);*/
+}
+.main-title{
+	color: rgba(250, 250, 250);
+	font-size: 36px;
+	text-shadow: 1px 1px 2px black;
+	top: 0%;
+	margin-left: 60px;
+	width: 100%;
+}
+.main-description{
+	font-family: "NetflixSansThin";
+	color: rgba(250, 250, 250);
+	font-size: 22px;
+	text-shadow: 1px 1px 2px black;
+	padding-top: 15px;
+	padding-left: 60px;
+	width: 600px;
+}
+.film-list h2{
+	position: absolute;
+	width: 400px;
+	top: 20px;
+	cursor: pointer;
+	z-index: 0;
+}
+.film-list h3{
+	display: inline;
+	color: rgba(229, 229, 229, 0.0);
+	transition: 1s;
+}
+.content .film-list{
+
+	background: transparent;
+	padding-right: 0px;
+  	padding-left: 60px;
+   	padding-bottom: 120px;
+   	padding-top: 40px;
+   	margin-left: 0px;
+   	margin-top: -65px;
+   	margin-bottom: 0px;
+   	/*row*/
+   	display: flex;
+   	overflow-y: hidden; 
+   	overflow-x: scroll;
+   	/*overflow: hidden;*/	/*This allow the posters get out the ul when hover*/
+   	position: relative;
+   	z-index: 0;
+ 	 	
+}
+.content .film-list::-webkit-scrollbar{
+	display: none;
+}
+
+.content .film-list div{
+	list-style-type: none;
+	margin-top: 8px;		
+}
+/*Router Link*/
+.actived{
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+}
+
+/* Window */
+.window{
+	width: 40%;
+	height: 412px;
+	background: yellow;
+	position: absolute;
+	left: 31%;
+	bottom: 60px;
+	border-radius: 10px;
+	z-index: 4;
+}
+/* Header Buttons */
+
+.header-buttons{
+	display: flex;
+	margin-left: 60px;
+}
+.header-buttons button{
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	font-size: 20px;
+	padding: 15px 40px; /* top, right*/
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	margin-right: 11px;
+	margin-top: 30px;
+	cursor: pointer;
+}
+.play-button{
+	width: 140px;
+	height: 45px;
+	background: rgba(250, 250, 250, 0.95);
+}
+.info-button{
+	width: 220px;
+	height: 45px;
+	/*margin-right: 10px;*/
+}
+.play-button span{
+	font-family: "NetflixSansMedium", Helvetica;
+	font-size: 19px;
+	color: black;
+	margin-left: -7px;
+}
+.play-button mat-icon{
+	transform: scale(2.5);
+	margin-left: -5px;
+}
+.play-button:hover{
+	background: rgba(250, 250, 250, 0.8);
+}
+.info-button{
+	background-color: rgba(112, 113, 109, 0.7);
+}
+.info-button mat-icon{
+	color: rgba(229, 229, 229);
+	transform: scale(1.25);
+}
+.info-button span{
+	font-family: "NetflixSansMedium", Helvetica;
+	font-size: 19px;
+	color: rgba(229, 229, 229);
+}
+.info-button:hover{
+	background-color: rgba(112, 113, 109, 0.5);
+}
+
+
+
+
+
+
+
